@@ -1,0 +1,53 @@
+<div class="side-bar-div bg-primary d-flex flex-column justify-content-between">
+  <!-- Logo -->
+  <div>
+    <div class="logo-div">
+      <img src="/assets/logo/logo-bird.png" alt="logo-img" />
+    </div>
+    <div class="nav-items mt-3">
+      <ul
+        class="d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <li
+          *ngFor="let nav of navItems"
+          class="p-3 w-100"
+          routerLink="{{ nav.routename }}"
+        >
+          <div
+            class="icon d-flex align-items-center justify-content-center"
+            routerLink="{{ nav.routename }}"
+          >
+            <i class="{{ nav.icon }}"></i>
+            <p class="m-0">{{ nav.title }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-settings bg-primary w-100">
+    <ul
+      class="d-flex flex-column justify-content-center align-items-center gap-4"
+    >
+      <li
+        *ngFor="let nav of navSettings"
+        class="p-3 w-100"
+        [ngClass]="{
+          'remove-hover-action': nav.title == 'Log Out'
+        }"
+      >
+        <div
+          class="icon d-flex align-items-center justify-content-center"
+          [ngClass]="{
+            'logout-btn p-2 bg-white': nav.title == 'Log Out'
+          }"
+          routerLink="{{ nav.routename }}"
+        >
+          <i class="{{ nav.icon }}"></i>
+          <p class="m-0">
+            {{ nav.title }}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.details:nth-child(3n-0) {
+    .account-rows {
+        div {
+            .icon {
+                background: #F1785B;
+            }
+        }
+    }
+}
+
+.details:nth-child(3n-1) {
+    .account-rows {
+        div {
+            .icon {
+                background: #AD96AD
+            }
+        }
+    }
+}
+
+.details:nth-child(3n-2) {
+    .account-rows {
+        div {
+            .icon {
+                background: #7EFC8A;
+            }
+        }
+    }
+}
+
+.load-more-btn {
+
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+@media screen and (max-width:700px) {
+    .icon {
+        display: none;
+    }
+
+    .settings-div {
+
+        display: none;
+    }
+}
+
+.settings-div {
+    text-align: center;
+
+    i {
+        cursor: pointer;
+    }
+}
